@@ -1,0 +1,12 @@
+
+# Created by https://www.gitignore.io/api/dotfilessh,dotsettings
+
+### DotfilesSh ###
+local-patch
+patched-src
+
+### DotSettings ###
+*.DotSettings
+
+
+# End of https://www.gitignore.io/api/dotfilessh,dotsettings

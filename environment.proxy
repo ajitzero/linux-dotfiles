@@ -1,0 +1,5 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+export http_proxy=http://0056:password@192.168.23.31:3128/
+export https_proxy=http://0056:password@192.168.23.31:3128/
+export ftp_proxy=http://0056:password@192.168.23.31:3128/
