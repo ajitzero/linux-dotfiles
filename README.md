@@ -4,8 +4,8 @@
 
 ## Info
 
-- **.zshrc:** My aliases and settings for [zsh]() with [oh-my-zsh]() enabled.
-- **.gitconfig:** Self explantory.
+- **.zshrc:** My aliases and settings for `zsh` with `oh-my-zsh` enabled.
+- **.gitconfig:** Self-explantory.
 - **.xbindkeysrc:** Remapping of additonal mouse buttons.
 - **.check_proxy.sh:** Performs `head` command on `/etc/environment`.
 - **.proxy_toggler.sh:** Toggle proxy settings for terminal. (Simply swaps original `/etc/environment` file with `environment.proxy`.)
@@ -16,4 +16,4 @@
 
 Ajit Panigrahi – [@AjitZero](https://github.com/AjitZero) – Ping me on [Twitter](https://twitter.com/AjitZero) or [Email me](mailto:ajitzero@gmail.com) for any queries.
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the [MIT License](https://opensource.org/licenses/MIT). See [`LICENSE`](https://github.com/AjitZero/dotfiles/blob/master/LICENSE) for more information.

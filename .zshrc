@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# added by Anaconda3 installer
+export PATH="/home/ajitzero/anaconda3/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/ajitzero/.oh-my-zsh
 
@@ -56,18 +59,18 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	colored-man-pages
+	cp
+	extract
 	git
 	github
-	extract
 	node
 	npm
 	nvm
-	colored-man-pages
-	cp
 	pip
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -97,34 +100,63 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Shorthands
 alias c="clear"
+alias cgst="c && gst"
+alias cls="c && lx"
+alias l="lx -A"
+alias la="lx -lA"
+alias ll="lx -l"
+alias nh="nautilus ."
+
+# Utilities
 alias chownme="sudo chown -R ajitzero:ajitzero"
 alias clippy="xclip -sel c < "
-alias cls="clear && ls"
-alias l="ls -la"
-alias la="ls -lA"
-alias ll="ls -l"
-alias ls="colorls"
-alias lst="ls --tree"
-alias nh="nautilus ."
-alias ohmyzsh="subl ~/.oh-my-zsh"
-alias rmx="trash"
-alias sassw="sass --watch sass/style.sass:style.css"
-alias sasswc="sassw --style compressed"
-alias uu="sudo apt update && sudo apt upgrade"
-alias venvst="source env/bin/activate"
-alias zshconfig="subl ~/.zshrc"
+alias uu="sudo apt update"
+alias uuu="uu && sudo apt upgrade"
 alias zzz="systemctl suspend"
 
+# Added utilities
+alias lx="colorls"
+alias lst="lx --tree"
+alias rmx="trash"
+
+# Python
+alias py="python3"
+alias venvst="source env/bin/activate"
+
+# Terminal settings
+alias ohmyzsh="subl ~/.oh-my-zsh"
+alias zshconfig="subl ~/.zshrc"
+
+# Sass
+alias sassw="sass --watch sass/style.sass:style.css"
+alias sasswc="sassw --style compressed"
+
+# Jekyll
+alias bserve="sudo bundle exec jekyll serve"
+alias jbuild="jekyll build"
+alias jbuildw="jbuild --watch"
+
+# Jekyll
+alias pyms="py -m http.server --bind localhost"
+
+# Access recent directories quickly
 # Reference: https://github.com/rupa/z
 . ~/.z.sh
 
-# gitignore.io
+# Quick-add gitignore file to project
+# Reference: https://gitignore.io/
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # Welcome Messages
 echo "Hi Ajit!" | figlet -f slant | lolcat -p 2.5
 echo "\n"
 date | lolcat -p 2.5
-ls
-echo "\n"
+lx
+
+# Show only current directory in agnoster theme
+prompt_dir() { prompt_segment blue black '%c' }
+
+# Enter key fix
+stty sane
